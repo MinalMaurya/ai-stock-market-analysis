@@ -1,0 +1,18 @@
+{
+  "ticker": "AAPL",
+  "start_date": "2018-01-01",
+  "end_date": null,
+  "test_ratio": 0.2,
+  "rsi_window": 14,
+  "sma_windows": [5, 10, 20],
+  "ema_fast": 12,
+  "ema_slow": 26,
+  "macd_signal": 9,
+  "bb_window": 20,
+  "n_splits_cv": 5,
+  "horizon_days": 5,
+  "threshold": 0.55,
+  "random_state": 42,
+  "plot_file": "equity_curve.png"
+  
+}
