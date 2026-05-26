@@ -1,100 +1,111 @@
-# AIStock - AI Powered Stock Market Prediction & Analysis Platform
+# AIStock 📈🤖
 
-## 📌 Overview
-AIStock is an AI-driven stock market analysis and prediction web application developed using Python and Streamlit. The project helps users analyze stock market trends, visualize historical data, and generate AI-based predictions using machine learning models and technical indicators.
+AIStock is an AI-powered stock market analysis and prediction web application built using Python and Streamlit. The project allows users to analyze US and Indian stocks, visualize market trends, compare historical performance, and generate AI-based stock insights using machine learning models.
 
-This project combines financial data analysis, machine learning, and interactive dashboards to provide a smarter way to understand stock market behavior.
-
----
-
-## 🚀 Features
-
-- 📈 Real-time stock market data visualization
-- 🤖 AI/ML-based stock trend prediction
-- 📊 Technical indicators integration:
-  - RSI (Relative Strength Index)
-  - MACD
-  - SMA & EMA
-  - Bollinger Bands
-- 🔍 Historical stock analysis
-- 📉 Interactive charts and dashboards
-- 🧠 Machine learning models using Scikit-learn & XGBoost
-- ⚡ Streamlit-based responsive UI
-- 🧪 Backtesting module for model evaluation
-- 🌐 Financial API integration
+The application supports multiple stock markets and fetches financial data using free public sources like Yahoo Finance and Stooq without requiring paid APIs.
 
 ---
 
-## 🛠️ Tech Stack
+# Features 🚀
 
-### Frontend
+- 📊 Real-time stock market visualization
+- 🇺🇸 US stock support
+- 🇮🇳 Indian stock support
+- 📈 Historical OHLCV chart analysis
+- 🤖 AI-based stock prediction
+- 🧠 Machine Learning integration
+- 🌙 Dark / Light theme mode
+- 🔍 Stock comparison functionality
+- 📉 Technical indicators and trends
+- ⚡ Fast interactive Streamlit dashboard
+- 🆓 No paid API required
+
+---
+
+# Tech Stack 🛠️
+
+## Frontend
 - Streamlit
-- HTML5
-- CSS3
-- JavaScript
+- HTML
+- CSS
 
-### Backend & Machine Learning
+## Backend
 - Python
-- Scikit-learn
-- XGBoost
-- Pandas
-- NumPy
-- Matplotlib
 
-### APIs & Data
-- Financial Market APIs
-- Historical Stock Datasets
+## Libraries Used
+- pandas
+- numpy
+- matplotlib
+- plotly
+- scikit-learn
+- yfinance
+- streamlit
+- ta
+- requests
 
 ---
 
-## 📂 Project Structure
+# Data Sources 📡
+
+This project currently uses free public financial market sources:
+
+- Yahoo Finance
+- Stooq Market Data
+
+No API keys are required for the current version of the project.
+
+---
+
+# Project Structure 📂
 
 ```bash
 AIStock/
 │
-├── data/                 # Stock datasets
-├── models/               # Trained ML models
-├── notebooks/            # Jupyter notebooks
-├── app.py                # Main Streamlit app
-├── requirements.txt      # Dependencies
-├── utils.py              # Helper functions
-├── indicators.py         # Technical indicators
-├── prediction.py         # ML prediction logic
-└── README.md
+├── app.py
+├── requirements.txt
+├── README.md
+├── src/
+│   ├── data.py
+│   ├── model.py
+│   ├── indicators.py
+│   └── utils.py
+│
+├── assets/
+├── models/
+├── notebooks/
+└── .venv/
 ```
 
 ---
 
-## ⚙️ Installation
+# Installation ⚙️
 
-### 1️⃣ Clone the Repository
+## 1. Clone Repository
 
 ```bash
 git clone https://github.com/your-username/AIStock.git
 cd AIStock
 ```
 
-### 2️⃣ Create Virtual Environment
+## 2. Create Virtual Environment
+
+### macOS / Linux
 
 ```bash
-python -m venv .venv
-```
-
-### 3️⃣ Activate Virtual Environment
-
-#### macOS/Linux
-
-```bash
+python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-#### Windows
+### Windows
 
 ```bash
+python -m venv .venv
 .venv\Scripts\activate
 ```
 
-### 4️⃣ Install Dependencies
+---
+
+## 3. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -102,55 +113,93 @@ pip install -r requirements.txt
 
 ---
 
-## ▶️ Run the Application
+# Run the Project ▶️
 
 ```bash
 streamlit run app.py
 ```
 
-The application will start locally in your browser.
+---
+
+# Supported Markets 🌍
+
+| Market | Example |
+|---|---|
+| US Stocks | AAPL, TSLA, MSFT |
+| Indian Stocks | RELIANCE.NS, TCS.NS |
 
 ---
 
-## 📊 Machine Learning Workflow
+# Machine Learning Features 🧠
 
-1. Fetch historical stock data
-2. Preprocess and clean datasets
-3. Generate technical indicators
-4. Train machine learning models
-5. Predict stock trends
-6. Visualize insights using charts
-
----
-
-## 🧠 Algorithms Used
-
-- Linear Regression
-- Random Forest
-- XGBoost
-- Time Series Analysis
-
+- Stock trend prediction
+- Time-series forecasting
+- Technical analysis
+- Moving averages
+- Volatility analysis
+- AI-generated insights
 
 ---
 
-## 🔮 Future Improvements
 
-- 📱 Mobile responsive design
-- 🔔 Real-time stock alerts
-- 📰 News sentiment analysis
-- ☁️ Cloud deployment
-- 📊 Portfolio management features
-- 🤝 AI chatbot integration
+# Future Improvements 🔮
 
----
-
-## 👩‍💻 Author
-
-**Minal Maurya**  
-Computer Science Student | AI/ML Enthusiast | Full Stack Learner
+- Live stock streaming
+- News sentiment analysis
+- Portfolio management
+- User authentication
+- Advanced ML/DL models
+- API-based live trading integration
+- Deployment on cloud platforms
 
 ---
 
-## 📝 Note
+# Known Issues ⚠️
 
-This project was developed for learning and experimentation in AI-based financial analysis. Some live market APIs may require updated keys or configurations.
+- Minor dark/light mode UI inconsistencies
+- Some Streamlit components may not fully follow custom themes
+- Public data sources may occasionally face rate limits
+
+---
+
+# Why This Project? 💡
+
+This project was developed to explore:
+- AI/ML in finance
+- Stock market analytics
+- Financial forecasting
+- Data visualization
+- Real-world machine learning applications
+
+---
+
+# License 📄
+
+This project is for educational and learning purposes.
+
+---
+
+# Author 👨‍💻
+
+## Minal Maurya
+
+- AI/ML Enthusiast
+- Python Developer
+- Interested in Financial Analytics and Intelligent Systems
+
+---
+
+# GitHub Topics 🏷️
+
+```text
+python
+machine-learning
+stock-market
+streamlit
+ai
+finance
+data-science
+stock-prediction
+yfinance
+india-stock-market
+```
