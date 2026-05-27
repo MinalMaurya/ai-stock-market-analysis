@@ -9,6 +9,8 @@ The application supports multiple stock markets and fetches financial data using
 
 Watch the complete project demonstration here:
 
+[![AiStock Demo](https://img.shields.io/badge/Watch-Demo_Video-red?style=for-the-badge&logo=youtube)](https://youtu.be/R_ecGF3B0Tc)
+
 ---
 
 
