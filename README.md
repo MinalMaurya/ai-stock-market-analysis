@@ -1,22 +1,25 @@
 # AIStock 📈🤖
 
-AIStock is an AI-powered stock market analysis and prediction web application built using Python and Streamlit. The project allows users to analyze US and Indian stocks, visualize market trends, compare historical performance, and generate AI-based stock insights using machine learning models.
+AIStock is an AI-powered stock market analysis and backtesting web application built using Python and Streamlit. The project allows users to analyze US and Indian stocks, visualize market trends, compare historical performance, and generate AI-based stock insights using machine learning concepts.
 
-The application supports multiple stock markets and fetches financial data using free public sources like Yahoo Finance and Stooq without requiring paid APIs.
+The application supports multiple stock markets and fetches financial data using free public sources such as Yahoo Finance and Stooq without requiring paid APIs.
 
 ---
 
+
 # Features 🚀
 
-- 📊 Real-time stock market visualization
-- 🇺🇸 US stock support
-- 🇮🇳 Indian stock support
+- 📊 Interactive stock market visualization
+- 🇺🇸 US stock market support
+- 🇮🇳 Indian stock market support
 - 📈 Historical OHLCV chart analysis
-- 🤖 AI-based stock prediction
+- 🤖 AI-based stock trend analysis
 - 🧠 Machine Learning integration
 - 🌙 Dark / Light theme mode
 - 🔍 Stock comparison functionality
-- 📉 Technical indicators and trends
+- 📉 Technical indicators & trend analysis
+- 📋 Chart-to-table numerical conversion
+- 📥 CSV & PNG export/download support
 - ⚡ Fast interactive Streamlit dashboard
 - 🆓 No paid API required
 
@@ -56,6 +59,34 @@ No API keys are required for the current version of the project.
 
 ---
 
+# Major Challenge Solved 🧩
+
+Initially, the project successfully analyzed US stocks such as AAPL, but Indian stock market analysis failed because Yahoo Finance requires exchange-specific ticker formats like `.NS` and `.BO`.
+
+To solve this issue, ticker normalization and preprocessing logic were implemented. Now, users can directly enter stock names such as `Reliance` or `TCS`, and the system automatically converts them into the correct market-compatible format internally before analysis.
+
+Additional improvements include:
+- Fallback mechanisms between data sources
+- Improved error handling
+- Market-date validation for weekends/holidays
+- Better cross-market compatibility
+
+---
+
+# Prediction Horizon Experimentation 📉
+
+The project was tested using multiple forecasting horizons, including 10-day and 5-day prediction windows.
+
+Results showed that:
+- 5-day horizon produced more stable performance
+- Reduced losses compared to the 10-day configuration
+- Improved drawdown control
+- Generated better backtesting metrics during volatile market conditions
+
+This experimentation helped optimize the final strategy configuration used in the project.
+
+---
+
 # Project Structure 📂
 
 ```bash
@@ -83,9 +114,11 @@ AIStock/
 ## 1. Clone Repository
 
 ```bash
-git clone https://github.com/your-username/AIStock.git
-cd AIStock
+git clone https://github.com/MinalMaurya/ai-stock-market-analysis.git
+cd ai-stock-market-analysis
 ```
+
+---
 
 ## 2. Create Virtual Environment
 
@@ -138,9 +171,9 @@ streamlit run app.py
 - Moving averages
 - Volatility analysis
 - AI-generated insights
+- Backtesting & strategy evaluation
 
 ---
-
 
 # Future Improvements 🔮
 
@@ -150,7 +183,7 @@ streamlit run app.py
 - User authentication
 - Advanced ML/DL models
 - API-based live trading integration
-- Deployment on cloud platforms
+- Cloud deployment support
 
 ---
 
@@ -158,7 +191,7 @@ streamlit run app.py
 
 - Minor dark/light mode UI inconsistencies
 - Some Streamlit components may not fully follow custom themes
-- Public data sources may occasionally face rate limits
+- Public market data sources may occasionally face rate limits
 
 ---
 
@@ -170,12 +203,13 @@ This project was developed to explore:
 - Financial forecasting
 - Data visualization
 - Real-world machine learning applications
+- Risk-analysis based backtesting
 
 ---
 
 # License 📄
 
-This project is for educational and learning purposes.
+This project is developed for educational and learning purposes only.
 
 ---
 
