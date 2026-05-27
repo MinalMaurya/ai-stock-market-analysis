@@ -5,6 +5,11 @@ AIStock is an AI-powered stock market analysis and backtesting web application b
 The application supports multiple stock markets and fetches financial data using free public sources such as Yahoo Finance and Stooq without requiring paid APIs.
 
 ---
+## 🎥 Demo Video
+
+Watch the complete project demonstration here:
+
+---
 
 
 # Features 🚀
