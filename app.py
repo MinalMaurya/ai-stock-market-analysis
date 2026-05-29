@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -252,7 +253,83 @@ st.markdown(
     .stAlert {{
         border-radius: 12px;
     }}
+    
+    /* =========================
+    EXPANDER + DATAFRAME FIX
+    ========================= */
 
+    div[data-testid="stExpander"] {{
+        background-color: {colors["CARD"]} !important;
+        border: 1px solid rgba(150,150,150,0.35) !important;
+        border-radius: 12px !important;
+        overflow: hidden !important;
+    }}
+
+    div[data-testid="stExpander"] summary {{
+        background-color: {colors["CARD"]} !important;
+        color: {colors["FG"]} !important;
+        font-weight: 600 !important;
+    }}
+
+    div[data-testid="stExpander"] summary * {{
+        color: {colors["FG"]} !important;
+    }}
+
+    div[data-testid="stExpander"] div {{
+        color: {colors["FG"]} !important;
+    }}
+
+    /* =========================
+    DATAFRAME FIX
+    ========================= */
+
+    div[data-testid="stDataFrame"] {{
+        background-color: {colors["CARD"]} !important;
+        border-radius: 12px !important;
+    }}
+
+    div[data-testid="stDataFrame"] * {{
+        color: {colors["FG"]} !important;
+    }}
+
+    /* Table header */
+    div[data-testid="stDataFrame"] thead tr th {{
+        background-color: {colors["CARD"]} !important;
+        color: {colors["FG"]} !important;
+    }}
+
+    /* Table cells */
+    div[data-testid="stDataFrame"] tbody tr td {{
+        background-color: {colors["INPUT"]} !important;
+        color: {colors["FG"]} !important;
+    }}
+
+    /* FINAL CHART TOOLTIP FIX */
+        #vg-tooltip-element {{
+        background: white !important;
+        color: black !important;
+        border: 1px solid #999 !important;
+        border-radius: 10px !important;
+        padding: 10px !important;
+        font-size: 14px !important;
+        opacity: 1 !important;
+        z-index: 999999 !important;
+    }}
+
+    #vg-tooltip-element * {{
+        color: black !important;
+        background: white !important;
+        opacity: 1 !important;
+    }}
+
+    #vg-tooltip-element table,
+    #vg-tooltip-element tbody,
+    #vg-tooltip-element tr,
+    #vg-tooltip-element td,
+    #vg-tooltip-element th {{
+        color: black !important;
+        background: white !important;
+    }}
     </style>
     """,
     unsafe_allow_html=True,
@@ -465,7 +542,7 @@ if run:
     close_chart = pd.to_numeric(close_chart, errors="coerce").dropna()
     close_chart.name = "Close"
 
-    st.line_chart(close_chart)
+    st.line_chart(close_chart, use_container_width=True)
 
     # ---------------- FEATURES ----------------
     st.subheader("2) Features & Target")
@@ -512,7 +589,11 @@ if run:
     st.bar_chart(target_counts)
 
     with st.expander("View all features used by the model"):
-        st.write(list(X.columns))
+        feature_df = pd.DataFrame({
+            "No.": range(1, len(X.columns) + 1),
+            "Feature Name": list(X.columns)
+        })
+        st.dataframe(feature_df, use_container_width=True)
 
     with st.expander("Preview feature dataset"):
         preview_df = X.copy()
@@ -561,10 +642,17 @@ if run:
     c3.metric("Recall", f"{cls['recall']:.3f}")
     c4.metric("ROC-AUC", f"{cls['roc_auc']:.3f}")
 
-    st.write("**Confusion Matrix:**", cls["confusion_matrix"])
+    cm = pd.DataFrame(
+    cls["confusion_matrix"],
+    index=["Actual Down/Hold", "Actual Up"],
+    columns=["Predicted Down/Hold", "Predicted Up"]
+)
+
+    st.write("**Confusion Matrix:**")
+    st.dataframe(cm, use_container_width=True)
 
     with st.expander("Full classification report"):
-        st.code(cls["classification_report"])
+        st.text(cls["classification_report"])
 
     # ---------------- BACKTEST ----------------
     st.subheader("6) Backtest")
