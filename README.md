@@ -12,6 +12,11 @@ Watch the complete project demonstration here:
 [![AiStock Demo](https://img.shields.io/badge/Watch-Demo_Video-red?style=for-the-badge&logo=youtube)](https://youtu.be/R_ecGF3B0Tc)
 
 ---
+## Screenshots
+# AiStock Dashboard
+<img width="1920" height="977" alt="Screenshot 2026-05-30 at 10 08 35 PM" src="https://github.com/user-attachments/assets/b82b8e25-1c00-474b-872b-c8076dabe756" />
+
+
 
 
 # Features 🚀
