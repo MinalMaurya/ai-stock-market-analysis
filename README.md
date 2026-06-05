@@ -34,7 +34,7 @@ Watch the complete project demonstration here:
 
 ### 📉 Strategy vs Buy & Hold
 
-![Equity Curve](screenshots/strategy-vs-buy-hold)
+![Equity Curve](screenshots/strategy-vs-buy-hold.png)
 
 ---
 
