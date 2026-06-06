@@ -20,6 +20,12 @@ Interactive dashboard for stock selection, market visualization, and machine lea
 ![Dashboard](screenshots/dashboard-overview.png)
 
 ---
+### ⚙️ Feature Engineering Pipeline
+Technical indicators including RSI, EMA, MACD, volatility, momentum, and volume-based features generated for model training.
+
+![Features](screenshots/feature-engineering.png)
+
+---
 
 ### 🤖 Model Performance Evaluation
 Evaluation using Accuracy, Precision, Recall, F1-Score, ROC-AUC, and Confusion Matrix.
@@ -42,15 +48,7 @@ Equity curve comparison between the machine learning strategy and a traditional 
 
 ---
 
-### ⚙️ Feature Engineering Pipeline
-Technical indicators including RSI, EMA, MACD, volatility, momentum, and volume-based features generated for model training.
-
-![Features](screenshots/feature-engineering.png)
-
----
-
 > 📂 Additional screenshots and project visuals are available in the `screenshots/` directory.
-
 
 
 
