@@ -15,31 +15,35 @@ Watch the complete project demonstration here:
 ## 📸 Application Screenshots
 
 ### 📊 Interactive Dashboard
+Interactive dashboard for stock selection, market visualization, and machine learning analysis.
 
 ![Dashboard](screenshots/dashboard-overview.png)
 
 ---
 
 ### 🤖 Model Performance Evaluation
+Evaluation using Accuracy, Precision, Recall, F1-Score, ROC-AUC, and Confusion Matrix.
 
 ![Metrics](screenshots/model-performance-metrics.png)
 
 ---
 
 ### 📈 Backtesting Results
+Historical strategy evaluation using CAGR, Sharpe Ratio, and Maximum Drawdown.
 
 ![Backtest](screenshots/backtesting-results.png)
 
 ---
 
 ### 📉 Strategy vs Buy & Hold
+Equity curve comparison between the machine learning strategy and a traditional buy-and-hold approach.
 
 ![Equity Curve](screenshots/strategy-vs-buy-hold.png)
 
 ---
 
 ### ⚙️ Feature Engineering Pipeline
-
+Technical indicators including RSI, EMA, MACD, volatility, momentum, and volume-based features generated for model training.
 
 ![Features](screenshots/feature-engineering.png)
 
